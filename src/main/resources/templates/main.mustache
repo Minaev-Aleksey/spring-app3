@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Введите имя">
+        <input type="text" name="age" placeholder="Введите возраст">
+        <input type="text" name="hobby" placeholder="Введите хобби">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<form method="post" action="filter">
+    <div>
+        <input type="text" name="filter">
+        <button type="submit">Найти</button>
+    </div>
+</form>
+
+<div>Списко персонажей
+</div>
+{{#personandhobby}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{name}}</span>
+        <span>{{age}}</span>
+        <span>{{hobby}}</span>
+    </div>
+{{/personandhobby}}
+
+<div>
+    <a href="http://localhost:8080/main">Сбросить настройки фильтра</a>
+</div>
+</body>
+</html>
